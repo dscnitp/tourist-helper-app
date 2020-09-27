@@ -38,3 +38,7 @@ Also, it would make the journey of a tourist very easy as it will give many serv
 * Second interval: Finalising the designs of the app ( only for the screens we decide in the first interval)
 * Third interval: Collecting data through google forms 
 * Fourth interval: Making APIs and creating databases
+
+## Design of the App
+
+[Tourist Helper App](https://www.figma.com/file/X2sky3vqdNnEoNV6IvHKf4/Tourist-Helper-App?node-id=0%3A1)
