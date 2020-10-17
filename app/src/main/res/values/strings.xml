@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TouristsHelperApp</string>
+    <string name="sign_in_google">Sign In with Google</string>
+    <string name="sign_in_otp">Sign in with OTP</string>
 </resources>
