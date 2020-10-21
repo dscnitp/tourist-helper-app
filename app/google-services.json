@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "801046524430",
+    "firebase_url": "https://tourist-helper-92d06.firebaseio.com",
+    "project_id": "tourist-helper-92d06",
+    "storage_bucket": "tourist-helper-92d06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801046524430:android:d82422010d63d13a19025f",
+        "android_client_info": {
+          "package_name": "com.dscnitp.touristshelperapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801046524430-k49e511ni1vqnldkja3mhbifdafegvo5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dscnitp.touristshelperapp",
+            "certificate_hash": "a734a9dd835b429c22acc75db57f27c351f4a79c"
+          }
+        },
+        {
+          "client_id": "801046524430-nfbrs22idgi9ggegb2ahg32aa1k8h17i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnx4DeJoIXPc4kW5PKnIvEloKHBP5YBHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801046524430-nfbrs22idgi9ggegb2ahg32aa1k8h17i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
