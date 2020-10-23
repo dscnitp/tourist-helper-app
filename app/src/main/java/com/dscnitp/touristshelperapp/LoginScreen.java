@@ -29,10 +29,12 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     Button google_btn;
     GoogleSignInClient mGoogleSigninClient;
     FirebaseAuth mAuth;
+    private Button sign_otp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+        sign_otp = findViewById(R.id.sign_in_otp);
         google_btn=(Button) findViewById(R.id.google_btn);
         mAuth=FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -41,6 +43,13 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                 .build();
         google_btn.setOnClickListener(this);
         mGoogleSigninClient= GoogleSignIn.getClient(this,gso);
+        sign_otp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent login_otp = new Intent(LoginScreen.this, LoginWithOtp.class);
+                startActivity(login_otp);
+            }
+        });
     }
 
     private void google_login() {
