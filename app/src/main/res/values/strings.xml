@@ -1,23 +1,5 @@
 <resources>
     <string name="app_name">TouristsHelperApp</string>
-<<<<<<< HEAD
-    <string name="title_activity_gogle_login">GogleLoginActivity</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
-    <string name="welcome_to_">Welcome to our app</string>
-    <string name="howdy_user_">Howdy user,</string>
-    <string name="sign_in_with_google">Sign In with Google</string>
-    <string name="sign_in_wit_otp">Sign In with OTP</string>
-
-
-=======
     <string name="sign_in_google">Sign In with Google</string>
     <string name="sign_in_otp">Sign in with OTP</string>
->>>>>>> 9e11ec9c9d16293b507892aea0f3e7218f7502f9
 </resources>
