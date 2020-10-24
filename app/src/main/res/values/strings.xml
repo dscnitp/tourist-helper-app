@@ -2,4 +2,11 @@
     <string name="app_name">TouristsHelperApp</string>
     <string name="sign_in_google">Sign In with Google</string>
     <string name="sign_in_otp">Sign in with OTP</string>
+   <string name="app_name1">TouristHelper</string>
+    <string name="top_places">Top Places</string>
+    <string name="uttrakhand">Uttrakhand</string>
+    <string name="all_places">All Cities</string>
+    <string name="Uttarakhand">Uttarakhand</string>
+
+
 </resources>
