@@ -6,6 +6,58 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/raleway</item>
     </style>
+    <style name="welcome_to_">
+
+        <item name="android:textSize">
+            23sp
+        </item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+    <style name="howdy_user_">
+
+        <item name="android:textSize">
+            30sp
+        </item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <style name="sign_in_with_google">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textColor">
+            #000000
+        </item>
+        <item name="android:padding">12dp</item>
+
+    </style>
+    <style name="sign_in_with_otp">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+        <item name="android:padding">12dp</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+     <style name="font_family">
+         <item name="android:fontFamily">@font/raleway</item>
+     </style>
+
 
 </resources>
