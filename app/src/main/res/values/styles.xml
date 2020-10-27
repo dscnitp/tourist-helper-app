@@ -8,6 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:fontFamily">@font/raleway</item>
     </style>
+    <style name="collapsing_theme">
+
+    </style>
     <style name="welcome_to_">
 
         <item name="android:textSize">

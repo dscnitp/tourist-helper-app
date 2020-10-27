@@ -14,6 +14,13 @@
     <string name="howdy_user_">Howdy user,</string>
     <string name="sign_in_with_google">Sign In with Google</string>
     <string name="sign_in_wit_otp">Sign In with OTP</string>
+    <string name="suggested_place">Suggested Places</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">Ayushman Sharma</string>
+    <string name="user_email">ayushman.ams999@gmail.com</string>
+    <string name="user_interest">Travel Lover</string>
+    <string name="user_age">Age: 20</string>
+    <string name="user_gender">Sex: M</string>
 
 
 </resources>
