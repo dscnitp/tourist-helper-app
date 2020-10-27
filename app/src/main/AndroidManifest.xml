@@ -2,10 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dscnitp.touristshelperapp">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <uses-feature android:name="android.hardware.type.watch" />
-
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-library
+
+           <uses-library
             android:name="com.google.android.wearable"
             android:required="true" />
 
@@ -30,15 +31,27 @@
         <activity
             android:name=".home_page_fragment"
             android:label="@string/title_activity_home_page_fragment">
+        <activity android:name=".SplashScreen">
+
+
+          
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".LoginScreen">
+
+               <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Google_Sign_in" />
+        <activity android:name=".bottom_bar"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".homeActivity" />
+        <activity android:name=".LoginScreen">
+
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

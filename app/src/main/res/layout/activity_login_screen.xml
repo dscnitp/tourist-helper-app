@@ -9,8 +9,8 @@
     <Button
         android:id="@+id/google_btn"
         android:layout_width="244dp"
-        android:layout_height="56dp"
-        android:text="@string/sign_in_google"
+        android:layout_height="47dp"
+        android:text="@string/sign_in_with_google"
         android:textColor="#000"
         android:background="@drawable/radius"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,13 +23,13 @@
         android:paddingRight="15dp"
         android:textAllCaps="false"
         android:paddingLeft="20dp"
-        android:drawableLeft="@drawable/google_icn"/>
+        android:drawableLeft="@drawable/ic_google"/>
 
     <Button
         android:id="@+id/sign_in_otp"
         android:layout_width="244dp"
-        android:layout_height="56dp"
-        android:text="@string/sign_in_otp"
+        android:layout_height="47dp"
+        android:text="@string/sign_in_wit_otp"
         android:textColor="#fff"
         android:background="@drawable/radius_otp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +42,7 @@
         android:paddingRight="15dp"
         android:textAllCaps="false"
         android:paddingLeft="20dp"
-        android:drawableLeft="@drawable/otp_icn"/>
+        android:drawableLeft="@drawable/ic_numbers"/>
 
     <View
         android:id="@+id/view"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524"
-        app:srcCompat="@drawable/login_bg" />
+        app:srcCompat="@drawable/ic_undraw_travel_plans_li01" />
 
     <TextView
         android:id="@+id/howdy_user"
@@ -77,7 +77,7 @@
         android:text="Howdy user,"
         android:textColor="#000"
         android:textColorHint="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
@@ -89,7 +89,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway_bold"
+        android:fontFamily="@font/raleway"
         android:text="Welcome to our app"
         android:textColor="#000"
         android:textSize="23sp"
