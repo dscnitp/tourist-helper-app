@@ -10,13 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".Google_Sign_in"></activity>
 
-        <activity android:name=".MainActivity">
-=======
+
+
         <activity android:name=".LoginScreen">
->>>>>>> 9e11ec9c9d16293b507892aea0f3e7218f7502f9
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
