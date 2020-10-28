@@ -21,6 +21,7 @@
     <string name="user_interest">Travel Lover</string>
     <string name="user_age">Age: 20</string>
     <string name="user_gender">Sex: M</string>
+    <string name="hello_blank_fragment">blank fragment</string>
 
 
 </resources>

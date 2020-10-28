@@ -42,7 +42,7 @@ public class bottom_bar extends AppCompatActivity {
 
                 }
                 if(fragment!=null)
-                {getSupportFragmentManager().beginTransaction().replace(R.id.container,new ExploreFragment()).commit();
+                {getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
 
 
 
