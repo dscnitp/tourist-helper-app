@@ -16,6 +16,10 @@
     <string name="sign_in_wit_otp">Sign In with OTP</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="favourites">Favourites</string>
+    <string name="mumbai">Mumbai</string>
+    <string name="state_mahar">State: Maharashtra</string>
+    <string name="price_rs_49">Price: Rs. 4900/head</string>
 
 
 </resources>

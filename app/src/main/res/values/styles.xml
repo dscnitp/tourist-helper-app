@@ -55,9 +55,58 @@
         </item>
 
     </style>
-     <style name="font_family">
-         <item name="android:fontFamily">@font/raleway</item>
-     </style>
+
+    <style name="font_family">
+        <item name="android:fontFamily">@font/raleway</item>
+    </style>
+
+    <style name="favourites">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+
+    </style>
+
+    <style name="mumbai">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="state_mahar">
+
+        <item name="android:textSize">
+            13sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="price_rs_49">
+
+        <item name="android:textSize">
+            13sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
 
 
 </resources>
