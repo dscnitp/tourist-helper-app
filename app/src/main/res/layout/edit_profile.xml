@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_back"
+            />
+        <Button
+            android:text="Save"
+            android:textAlignment="center"
+            android:textAppearance="@style/save"
+            android:layout_width="95dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="12dp"
+
+            android:background="@drawable/rectangle_3"/>
+        <TextView
+            android:id="@+id/edit_profile"
+            android:layout_width="120dp"
+            android:layout_height="23dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textAppearance="@style/edit_profile"
+            android:text="Edit Profile"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/edit_profile"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="158dp"
+            android:scaleType="centerCrop"
+            android:alpha="0.8"
+            android:src="@drawable/profile"
+
+
+
+            app:civ_border_color="@color/cardview_dark_background"
+            app:civ_border_width="2dp" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/edit_profile"
+            android:layout_marginTop="42dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="158dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_edit_dp"
+            />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Username"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  UserName"
+            android:inputType="textPersonName"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+
+            android:background="@drawable/rectangle_4"/>
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Email"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  Email"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rectangle_4"/>
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Contact"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  Mobile"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:inputType="phone"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rectangle_4"/>
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Description"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  Description"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rectangle_4"/>
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Gender"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  Male"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:inputType="text"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rectangle_4"/>
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:layout_width="87dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="28dp"
+            android:text="Location"
+            android:textAppearance="@style/username"/>
+        <EditText
+            android:layout_marginTop="14dp"
+            android:hint="  Location"
+            android:layout_width="361dp"
+            android:layout_height="35dp"
+            android:inputType="text"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rectangle_4"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
