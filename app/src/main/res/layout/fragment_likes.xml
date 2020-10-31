@@ -6,9 +6,250 @@
     tools:context=".LikesFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--
+  Font family: Raleway
+  Line height: 23sp-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:id="@+id/fav_layout"
+        android:orientation="vertical"
+        android:layout_marginTop="18dp"
+
+        >
+
+        <TextView
+            android:id="@+id/favourites"
+            android:layout_width="100dp"
+            android:layout_height="23dp"
+            android:textFontWeight="700"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="161dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-6dp"
+            android:text="@string/favourites"
+            android:textAppearance="@style/favourites"
+            android:gravity="top"
+            android:fontFamily="@font/raleway"
+            android:lineHeight="23sp" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="411.02dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/line_2" />
+
+        <TextView
+            android:id="@+id/favourites2"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="17dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:text="@string/favourites"
+            android:textAppearance="@style/favourites"
+            android:gravity="top" />
+
+        <LinearLayout
+            android:id="@+id/rectangle_1"
+            android:layout_width="380dp"
+            android:layout_height="190dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="#81818a"
+
+
+            android:background="@drawable/city_img">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="111dp">
+
+                <TextView
+                    android:id="@+id/mumbai1"
+                    android:layout_width="58dp"
+                    android:layout_height="18dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/mumbai"
+                    android:textAppearance="@style/mumbai"
+
+                    />
+
+                <TextView
+                    android:id="@+id/state_mahar1"
+                    android:layout_width="116dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/mumbai1"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/state_mahar"
+                    android:textAppearance="@style/state_mahar"
+                    android:gravity="top" />
+
+                <TextView
+                    android:id="@+id/price_rs_491"
+                    android:layout_width="129dp"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/state_mahar1"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/price_rs_49"
+                    android:textAppearance="@style/price_rs_49"
+
+                    />
+            </RelativeLayout>
+
+            <ImageView
+
+                android:layout_width="17.17dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="191dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/like_icon">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rectangle_2"
+            android:layout_width="380dp"
+            android:layout_height="190dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="#81818a"
+
+            android:background="@drawable/city_img">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="111dp">
+
+                <TextView
+                    android:id="@+id/mumbai2"
+                    android:layout_width="58dp"
+                    android:layout_height="18dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/mumbai"
+                    android:textAppearance="@style/mumbai"
+
+                    />
+
+                <TextView
+                    android:id="@+id/state_mahar2"
+                    android:layout_width="116dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/mumbai2"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/state_mahar"
+                    android:textAppearance="@style/state_mahar"
+                    android:gravity="top" />
+
+                <TextView
+                    android:id="@+id/price_rs_49_1"
+                    android:layout_width="129dp"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/state_mahar2"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/price_rs_49"
+                    android:textAppearance="@style/price_rs_49"
+
+                    />
+            </RelativeLayout>
+
+            <ImageView
+
+                android:layout_width="17.17dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="191dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/like_icon">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rectangle_3"
+            android:layout_width="380dp"
+            android:layout_height="190dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTintMode="multiply"
+            android:backgroundTint="#81818a"
+
+            android:background="@drawable/city_img">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="111dp">
+
+                <TextView
+                    android:id="@+id/mumbai"
+                    android:layout_width="58dp"
+                    android:layout_height="18dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/mumbai"
+                    android:textAppearance="@style/mumbai"
+
+                    />
+
+                <TextView
+                    android:id="@+id/state_mahar"
+                    android:layout_width="116dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/mumbai"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/state_mahar"
+                    android:textAppearance="@style/state_mahar"
+                    android:gravity="top" />
+
+                <TextView
+                    android:id="@+id/price_rs_49"
+                    android:layout_width="129dp"
+                    android:layout_height="18dp"
+                    android:layout_below="@+id/state_mahar"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/price_rs_49"
+                    android:textAppearance="@style/price_rs_49"
+
+                    />
+            </RelativeLayout>
+
+            <ImageView
+
+                android:layout_width="17.17dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="191dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/like_icon">
+
+            </ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>
