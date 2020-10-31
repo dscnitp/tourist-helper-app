@@ -1,10 +1,11 @@
-package com.dscnitp.touristshelperapp;
+package com.dscnitp.touristshelperapp.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.dscnitp.touristshelperapp.R;
 import com.ncorti.slidetoact.SlideToActView;
 
 public class SplashScreen extends AppCompatActivity {

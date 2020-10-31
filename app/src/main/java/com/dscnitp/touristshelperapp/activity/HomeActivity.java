@@ -1,18 +1,19 @@
-package com.dscnitp.touristshelperapp;
+package com.dscnitp.touristshelperapp.activity;
 
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.dscnitp.touristshelperapp.fragment.ExploreFragment;
+import com.dscnitp.touristshelperapp.fragment.LikesFragment;
+import com.dscnitp.touristshelperapp.fragment.MapsFragment;
+import com.dscnitp.touristshelperapp.fragment.ProfileFragment;
+import com.dscnitp.touristshelperapp.R;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
-public class bottom_bar extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     ChipNavigationBar bottomNav;
 
     @Override
@@ -43,8 +44,6 @@ public class bottom_bar extends AppCompatActivity {
                 }
                 if(fragment!=null)
                 {getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commit();
-
-
 
                 }
             }
