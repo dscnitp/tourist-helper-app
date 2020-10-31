@@ -28,6 +28,9 @@
     <string name="user_age">Age: 20</string>
     <string name="user_gender">Sex: M</string>
     <string name="hello_blank_fragment">blank fragment</string>
+    <string name="top_places">Top Places</string>
+    <string name="all_places">All Cities</string>
+    <string name="Uttarakhand">Uttarakhand</string>
 
 
 
