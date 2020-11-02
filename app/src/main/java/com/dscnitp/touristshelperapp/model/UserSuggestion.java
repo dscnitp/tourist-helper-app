@@ -1,4 +1,4 @@
-package com.dscnitp.touristshelperapp;
+package com.dscnitp.touristshelperapp.model;
 
 public class UserSuggestion {
     private String city;

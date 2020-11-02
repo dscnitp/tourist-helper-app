@@ -1,4 +1,4 @@
-package com.dscnitp.touristshelperapp;
+package com.dscnitp.touristshelperapp.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dscnitp.touristshelperapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -114,7 +115,7 @@ public class LoginWithOtp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "You logged in Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginWithOtp.this, homeActivity.class);
+                            Intent intent = new Intent(LoginWithOtp.this, HomeActivity.class);
                             startActivity(intent);
 
                         } else {

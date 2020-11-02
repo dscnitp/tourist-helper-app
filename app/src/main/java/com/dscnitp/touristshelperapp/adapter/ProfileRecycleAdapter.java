@@ -1,4 +1,4 @@
-package com.dscnitp.touristshelperapp;
+package com.dscnitp.touristshelperapp.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.dscnitp.touristshelperapp.R;
+import com.dscnitp.touristshelperapp.model.UserSuggestion;
 
 import java.util.ArrayList;
 
