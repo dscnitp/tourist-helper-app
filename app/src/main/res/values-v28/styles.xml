@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+
+
+
+    <style name="map">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:fontFamily">
+            @font/raleway
+        </item>
+        <item name="android:textFontWeight">
+            700
+        </item>
+        <item name="android:textColor">
+            #121112
+        </item>
+
+    </style>
+
+
+</resources>

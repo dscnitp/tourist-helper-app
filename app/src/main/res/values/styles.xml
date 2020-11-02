@@ -140,5 +140,56 @@
 
     </style>
 
+    <style name="map">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:fontFamily">
+            @font/raleway
+        </item>
+        <item name="android:textColor">
+            #121112
+        </item>
+        <item name="lineHeight">
+            23.48sp
+        </item>
+
+    </style>
+
+    <style name="recent_loca">
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+        <item name="android:fontFamily">
+            @font/raleway
+        </item>
+        <item name="lineHeight">
+            17.61sp
+        </item>
+    </style>
+
+    <style name="mumbai_maha">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+        <item name="fontFamily">
+            @font/raleway
+        </item>
+        <item name="lineHeight">
+            17.61sp
+        </item>
+
+    </style>
+
 
 </resources>
