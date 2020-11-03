@@ -39,6 +39,11 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.locate:
                         fragment=new MapsFragment();
+                        //open fragment
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.frame_layout,fragment)
+                                .commit();
                         break;
 
                 }
