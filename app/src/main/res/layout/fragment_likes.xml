@@ -3,12 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LikesFragment">
+    tools:context=".fragment.LikesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!--
-  Font family: Raleway
-  Line height: 23sp-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
