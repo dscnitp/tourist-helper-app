@@ -25,10 +25,10 @@ import java.util.concurrent.TimeUnit;
 public class LoginWithOtp extends AppCompatActivity {
 
     private Button request, verify;
-    private EditText mobile_edit, otp_edit;
-    private String phone, mVerificationId;
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
-    private FirebaseAuth mAuth;
+    private EditText mobileEdit, otpEdit;
+    private String phone, verificationId;
+    private PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +36,17 @@ public class LoginWithOtp extends AppCompatActivity {
         setContentView(R.layout.activity_login_with_otp);
 
         request = findViewById(R.id.request_btn_otp);
-        mobile_edit = findViewById(R.id.phno);
-        otp_edit = findViewById(R.id.otp);
+        mobileEdit = findViewById(R.id.phno);
+        otpEdit = findViewById(R.id.otp);
         verify=findViewById(R.id.verify_otp);
-        mAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+        callbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
                 String code = phoneAuthCredential.getSmsCode();
                 if (code != null) {
-                    otp_edit.setText(code);
+                    otpEdit.setText(code);
                     verifyVerificationCode(code);
                 }
             }
@@ -59,18 +59,18 @@ public class LoginWithOtp extends AppCompatActivity {
             @Override
             public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 super.onCodeSent(s, forceResendingToken);
-                mVerificationId = s;
+                verificationId = s;
             }
         };
 
         request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phone = mobile_edit.getText().toString().trim();
+                phone = mobileEdit.getText().toString().trim();
 
                 if(phone.length() < 10 || phone.isEmpty()){
-                    mobile_edit.setError("Enter a valid mobile");
-                    mobile_edit.requestFocus();
+                    mobileEdit.setError("Enter a valid mobile");
+                    mobileEdit.requestFocus();
                     return;
                 }
                 sendVerificationCode(phone);
@@ -80,10 +80,10 @@ public class LoginWithOtp extends AppCompatActivity {
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String code = otp_edit.getText().toString().trim();
+                String code = mobileEdit.getText().toString().trim();
                 if (code.isEmpty() || code.length() < 6) {
-                    otp_edit.setError("Enter valid code");
-                    otp_edit.requestFocus();
+                    mobileEdit.setError("Enter valid code");
+                    mobileEdit.requestFocus();
                     return;
                 }
                 verifyVerificationCode(code);
@@ -97,19 +97,19 @@ public class LoginWithOtp extends AppCompatActivity {
                 60,
                 TimeUnit.SECONDS,
                 this,
-                mCallbacks);
+                callbacks);
     }
 
     private void verifyVerificationCode(String code) {
-        //creating the credential
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, code);
+        //creating the phoneAuthCredential
+        PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential(verificationId, code);
 
         //signing the user
-        signInWithPhoneAuthCredential(credential);
+        signInWithPhoneAuthCredential(phoneAuthCredential);
     }
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential)
+        firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(LoginWithOtp.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {

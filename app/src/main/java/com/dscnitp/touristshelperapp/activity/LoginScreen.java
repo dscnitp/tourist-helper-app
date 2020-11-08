@@ -26,34 +26,34 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginScreen extends AppCompatActivity implements View.OnClickListener {
     private static final int RC_SIGN_IN =1000 ;
-    Button google_btn;
-    GoogleSignInClient mGoogleSigninClient;
-    FirebaseAuth mAuth;
-    private Button sign_otp;
+    Button googleButton;
+    GoogleSignInClient googleSignInClient;
+    FirebaseAuth firebaseAuth;
+    private Button signOtpBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
-        sign_otp = findViewById(R.id.sign_in_otp);
-        google_btn=(Button) findViewById(R.id.google_btn);
-        mAuth=FirebaseAuth.getInstance();
+        signOtpBtn = findViewById(R.id.sign_in_otp);
+        googleButton=(Button) findViewById(R.id.google_btn);
+        firebaseAuth=FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        google_btn.setOnClickListener(this);
-        mGoogleSigninClient= GoogleSignIn.getClient(this,gso);
-        sign_otp.setOnClickListener(new View.OnClickListener() {
+        googleButton.setOnClickListener(this);
+        googleSignInClient= GoogleSignIn.getClient(this,gso);
+        signOtpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login_otp = new Intent(LoginScreen.this, LoginWithOtp.class);
-                startActivity(login_otp);
+                Intent loginOtpIntent = new Intent(LoginScreen.this, LoginWithOtp.class);
+                startActivity(loginOtpIntent);
             }
         });
     }
 
     private void google_login() {
-        Intent signInIntent = mGoogleSigninClient.getSignInIntent();
+        Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
@@ -92,7 +92,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
 
     private void firebaseAuth(GoogleSignInAccount account) {
         AuthCredential authCredential= GoogleAuthProvider.getCredential(account.getIdToken(),null);
-        mAuth.signInWithCredential(authCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithCredential(authCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
@@ -100,7 +100,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                     Toast.makeText(LoginScreen.this,"Firebase Auth successful",Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                     finish();
-                    FirebaseUser user=mAuth.getCurrentUser();
+                    FirebaseUser user=firebaseAuth.getCurrentUser();
                 }
                 else
                 {

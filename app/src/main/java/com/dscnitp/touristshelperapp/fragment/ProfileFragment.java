@@ -48,8 +48,8 @@ public class ProfileFragment extends Fragment{
         list.add(new UserSuggestion("Lucknow","Uttar Pradesh","1500"));
         list.add(new UserSuggestion("Mirzapur","Uttar Pradesh","1000"));
         list.add(new UserSuggestion("New Delhi","Delhi","2000"));
-        ProfileRecycleAdapter mAdapter=new ProfileRecycleAdapter(list);
-        recyclerView.setAdapter(mAdapter);
+        ProfileRecycleAdapter profileRecycleAdapter=new ProfileRecycleAdapter(list);
+        recyclerView.setAdapter(profileRecycleAdapter);
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
