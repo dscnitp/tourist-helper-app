@@ -22,10 +22,19 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginWithOtp extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private Button request, verify;
-    private EditText mobile_edit, otp_edit;
+public class LoginWithOtp extends AppCompatActivity {
+@BindView(R.id.request_btn_otp)
+   public Button request;
+@BindView(R.id.verify_otp)
+   public Button verify;
+@BindView(R.id.phno)
+    public EditText mobile_edit ;
+    @BindView(R.id.otp)
+    public  EditText otp_edit;
     private String phone, mVerificationId;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private FirebaseAuth mAuth;
@@ -34,12 +43,8 @@ public class LoginWithOtp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_with_otp);
-
-        request = findViewById(R.id.request_btn_otp);
-        mobile_edit = findViewById(R.id.phno);
-        otp_edit = findViewById(R.id.otp);
-        verify=findViewById(R.id.verify_otp);
         mAuth = FirebaseAuth.getInstance();
+        ButterKnife.bind(this);
 
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
@@ -63,34 +68,29 @@ public class LoginWithOtp extends AppCompatActivity {
             }
         };
 
-        request.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                phone = mobile_edit.getText().toString().trim();
-
-                if(phone.length() < 10 || phone.isEmpty()){
-                    mobile_edit.setError("Enter a valid mobile");
-                    mobile_edit.requestFocus();
-                    return;
-                }
-                sendVerificationCode(phone);
-            }
-        });
-
-        verify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String code = otp_edit.getText().toString().trim();
-                if (code.isEmpty() || code.length() < 6) {
-                    otp_edit.setError("Enter valid code");
-                    otp_edit.requestFocus();
-                    return;
-                }
-                verifyVerificationCode(code);
-            }
-        });
     }
+    @OnClick(R.id.request_btn_otp)
+    public void requestClick()
+    {
+        phone = mobile_edit.getText().toString().trim();
 
+        if(phone.length() < 10 || phone.isEmpty()){
+            mobile_edit.setError("Enter a valid mobile");
+            mobile_edit.requestFocus();
+            return;
+        }
+        sendVerificationCode(phone);
+    }
+@OnClick (R.id.verify_otp)
+public void verifyClick(){
+    String code = otp_edit.getText().toString().trim();
+    if (code.isEmpty() || code.length() < 6) {
+        otp_edit.setError("Enter valid code");
+        otp_edit.requestFocus();
+        return;
+    }
+    verifyVerificationCode(code);
+}
     private void sendVerificationCode(String mobile) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+91" + mobile,
