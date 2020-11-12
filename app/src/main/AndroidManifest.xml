@@ -3,6 +3,8 @@
     package="com.dscnitp.touristshelperapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".SplashScreen">
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDMMr0NDVKzvJyEtC7Eq2xsXIx9nCu5p_Y"/>
+        <activity android:name=".activity.SplashScreen" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

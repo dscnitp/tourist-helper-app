@@ -13,14 +13,20 @@ import com.dscnitp.touristshelperapp.fragment.ProfileFragment;
 import com.dscnitp.touristshelperapp.R;
 import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnItemSelected;
+
 public class HomeActivity extends AppCompatActivity {
+    @BindView(R.id.bottom_nav)
     ChipNavigationBar bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_bar);
-        bottomNav=findViewById(R.id.bottom_nav);
+        ButterKnife.bind(this);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.container,new ExploreFragment()).commit();
         bottomNav.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
             @Override
@@ -39,6 +45,11 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.locate:
                         fragment=new MapsFragment();
+                        //open fragment
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .replace(R.id.frame_layout,fragment)
+                                .commit();
                         break;
 
                 }
@@ -47,6 +58,9 @@ public class HomeActivity extends AppCompatActivity {
 
                 }
             }
+
+
+
 
         });
 

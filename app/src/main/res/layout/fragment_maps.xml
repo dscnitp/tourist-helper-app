@@ -1,14 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/frame_layout"
     tools:context=".fragment.MapsFragment">
-
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="185dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="192dp"
+        android:gravity="top"
+        android:textFontWeight="700"
+        android:text="@string/map"
+        android:textAppearance="@style/map" />
 
-</FrameLayout>
+    <fragment
+        android:id="@+id/google_map"
+        android:layout_width="411dp"
+        android:layout_height="291dp"
+        tools:context="com.example.dell.displayinggooglemaps.MapFragment"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true" />
+        <!--android:name="com.google.android.gms.map.SupportMapFragment"-->
+
+    <TextView
+        android:id="@+id/recent_loca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="366dp"
+        android:textFontWeight="600"
+        android:text="@string/recent_loca"
+        android:textAppearance="@style/recent_loca"
+        android:gravity="top"
+        />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rec_loc_1"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="399dp"
+        android:alpha="0.2"
+        android:background="@drawable/rec_loc_1">
+
+        <TextView
+            android:id="@+id/mumbai_maha"
+            android:layout_width="154dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:text="@string/mumbai_maha"
+            android:textAppearance="@style/mumbai_maha"
+            android:textFontWeight="600" />
+
+        <View
+            android:id="@+id/map_icon"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="32.97dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="13.91dp"
+            android:layout_marginRight="311.97dp"
+            android:background="@drawable/ic_maps_and_flags" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rec_loc_2"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="468dp"
+        android:alpha="0.2"
+        android:background="@drawable/rec_loc_2">
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:text="@string/mumbai_maha"
+            android:textAppearance="@style/mumbai_maha"
+            android:textFontWeight="600" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="32.97dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="13.91dp"
+            android:layout_marginRight="311.97dp"
+            android:background="@drawable/ic_maps_and_flags" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rec_loc_3"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="537dp"
+        android:alpha="0.2"
+        android:background="@drawable/rec_loc_3">
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:text="@string/mumbai_maha"
+            android:textAppearance="@style/mumbai_maha"
+            android:textFontWeight="600" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="32.97dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="13.91dp"
+            android:layout_marginRight="311.97dp"
+            android:background="@drawable/ic_maps_and_flags" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rec_loc_4"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="606dp"
+        android:alpha="0.2"
+        android:background="@drawable/rec_loc_4">
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="16dp"
+            android:gravity="top"
+            android:text="@string/mumbai_maha"
+            android:textAppearance="@style/mumbai_maha"
+            android:textFontWeight="600" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="32.97dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginBottom="13.91dp"
+            android:layout_marginRight="311.97dp"
+            android:background="@drawable/ic_maps_and_flags" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
