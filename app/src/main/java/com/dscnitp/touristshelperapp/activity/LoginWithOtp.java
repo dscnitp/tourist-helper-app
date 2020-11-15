@@ -52,6 +52,8 @@ public class LoginWithOtp extends AppCompatActivity {
                 String code = phoneAuthCredential.getSmsCode();
                 if (code != null) {
                     otp_edit.setText(code);
+                    otp_edit.setVisibility(View.VISIBLE);
+                    verify.setVisibility(View.VISIBLE);
                     verifyVerificationCode(code);
                 }
             }
