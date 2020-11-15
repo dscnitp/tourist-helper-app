@@ -7,7 +7,7 @@
 
     android:background="@drawable/google_pixe"
 
-    tools:context=".Google_Sign_in">
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="309dp"
             android:layout_marginTop="0dp"
-            android:background="@drawable/ellipse_4" />
+            android:background="@drawable/ic_ellipse" />
 
         <View
             android:id="@+id/line_1"
@@ -74,7 +74,7 @@
             android:layout_marginLeft="83dp"
             android:textAlignment="center"
 
-            android:background="@drawable/undraw_travel_plans" />
+            android:background="@drawable/bg_login2" />
 
 
 
@@ -93,7 +93,7 @@
 
            android:layout_marginTop="83dp"
             android:background="@drawable/rectangle_2"
-            android:drawableLeft="@drawable/google_icon_d"
+            android:drawableLeft="@drawable/ic_google2"
             android:elevation="20dp"
 
             android:layout_marginRight="63dp"
@@ -116,7 +116,7 @@
             android:paddingRight="20dp"
             android:layout_marginTop="34dp"
             android:background="@drawable/rectangle_3"
-            android:drawableLeft="@drawable/numbers_icon"
+            android:drawableLeft="@drawable/ic_otp2"
 
             android:elevation="20dp"
             android:layout_marginLeft="63dp"

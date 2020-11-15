@@ -12,7 +12,7 @@
         android:layout_height="47dp"
         android:text="@string/sign_in_with_google"
         android:textColor="#000"
-        android:background="@drawable/radius"
+        android:background="@drawable/radius_google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -42,7 +42,7 @@
         android:paddingRight="15dp"
         android:textAllCaps="false"
         android:paddingLeft="20dp"
-        android:drawableLeft="@drawable/ic_numbers"/>
+        android:drawableLeft="@drawable/ic_otp"/>
 
     <View
         android:id="@+id/view"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524"
-        app:srcCompat="@drawable/ic_undraw_travel_plans_li01" />
+        app:srcCompat="@drawable/bg_login" />
 
     <TextView
         android:id="@+id/howdy_user"
@@ -110,6 +110,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.077"
-        app:srcCompat="@drawable/ellipse_icn" />
+        app:srcCompat="@drawable/ic_ellipse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
