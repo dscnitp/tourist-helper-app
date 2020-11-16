@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:srcCompat="@drawable/back_settings" />
+        app:srcCompat="@drawable/ic_back1" />
 
     <TextView
         android:id="@+id/textView"
@@ -61,7 +61,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/edit_profile_settings" />
+                android:src="@drawable/ic_edit_profile1" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -93,7 +93,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/tnc_settings" />
+                android:src="@drawable/ic_tnc_settings" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -125,7 +125,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/privacy_policy_settings" />
+                android:src="@drawable/ic_privacy_policy" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -158,7 +158,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/rate_us_settings" />
+                android:src="@drawable/ic_rate_us" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -190,7 +190,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/version_settings" />
+                android:src="@drawable/ic_version" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -222,7 +222,7 @@
                 android:maxHeight="30dp"
                 android:maxWidth="30dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/logout_settings" />
+                android:src="@drawable/ic_logout1" />
 
             <TextView
                 android:layout_width="fill_parent"
