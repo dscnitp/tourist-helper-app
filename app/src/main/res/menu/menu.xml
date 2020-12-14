@@ -4,7 +4,7 @@
     <item
         android:id="@+id/explore"
         android:title="Explore"
-        android:icon="@drawable/ic_vector_explore"
+        android:icon="@drawable/ic_explore"
         app:cnb_backgroundColor="#536DFE"
         app:cnb_textColor="#fff"
         app:cnb_iconColor="#fff"/>
@@ -14,20 +14,20 @@
         app:cnb_backgroundColor="#536DFE"
         app:cnb_textColor="#fff"
         app:cnb_iconColor="#fff"
-        android:icon="@drawable/ic_baseline_account_circle_24"/>
+        android:icon="@drawable/ic_profile"/>
     <item
         android:id="@+id/notification"
         android:title="Likes"
         app:cnb_backgroundColor="#536DFE"
         app:cnb_textColor="#fff"
         app:cnb_iconColor="#fff"
-        android:icon="@drawable/ic_vector_like"/>
+        android:icon="@drawable/ic_like"/>
     <item
         android:id="@+id/locate"
         android:title="Maps"
         app:cnb_backgroundColor="#536DFE"
         app:cnb_textColor="#fff"
         app:cnb_iconColor="#fff"
-        android:icon="@drawable/ic_vector_maps"/>
+        android:icon="@drawable/ic_maps"/>
 
 </menu>

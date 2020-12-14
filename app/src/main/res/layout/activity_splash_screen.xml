@@ -21,7 +21,7 @@
         android:layout_width="185dp"
         android:layout_height="199dp"
         android:id="@+id/splash_image"
-        android:src="@drawable/ic_undraw_travelers_qlt1"
+        android:src="@drawable/bg_travelers"
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintBottom_toTopOf="@+id/slider"
         app:layout_constraintEnd_toEndOf="parent"
