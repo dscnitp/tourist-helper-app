@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -114,8 +115,11 @@ public void verifyClick(){
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "You logged in Successfully", Toast.LENGTH_SHORT).show();
+                            SharedPreferences prefs = getSharedPreferences("phoneSignIn", 0);
+                            prefs.edit().putString("numSignIn", "+91"+phone).apply();
                             Intent intent = new Intent(LoginWithOtp.this, HomeActivity.class);
                             startActivity(intent);
+                            finish();
 
                         } else {
 
