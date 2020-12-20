@@ -211,7 +211,8 @@
             android:background="#fff"
             android:clickable="true"
             android:padding="8dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:onClick="logOut">
 
             <ImageView
                 android:layout_width="wrap_content"

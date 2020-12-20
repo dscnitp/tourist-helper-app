@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.io.File;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -42,6 +45,12 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_login_screen);
         mAuth=FirebaseAuth.getInstance();
         ButterKnife.bind(this);
+
+        if(new File("/data/data/your_application_package/shared_prefs/googleSignIn.xml").exists() || new File("/data/data/your_application_package/shared_prefs/numSignIn.xml").exists()){
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+            finish();
+        }
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -83,6 +92,13 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+
+            SharedPreferences prefs = getSharedPreferences("userCredentials", 0);
+            prefs.edit().putBoolean("googleSignIn", true).apply();
+            prefs.edit().putString("email", account.getEmail()).apply();
+            prefs.edit().putString("id", account.getId()).apply();
+            prefs.edit().putString("username", account.getDisplayName()).apply();
+
 
             // Signed in successfully, show authenticated UI.
             Toast.makeText(this,account.getDisplayName()+" is in!",Toast.LENGTH_SHORT).show();
