@@ -110,7 +110,7 @@
                 android:layout_height="15dp"
                 android:layout_marginLeft="191dp"
                 android:layout_marginTop="19dp"
-                android:background="@drawable/like_icon">
+                android:background="@drawable/ic_like">
 
             </ImageView>
 
@@ -176,7 +176,7 @@
                 android:layout_height="15dp"
                 android:layout_marginLeft="191dp"
                 android:layout_marginTop="19dp"
-                android:background="@drawable/like_icon">
+                android:background="@drawable/ic_like">
 
             </ImageView>
         </LinearLayout>
@@ -240,7 +240,7 @@
                 android:layout_height="15dp"
                 android:layout_marginLeft="191dp"
                 android:layout_marginTop="19dp"
-                android:background="@drawable/like_icon">
+                android:background="@drawable/ic_like">
 
             </ImageView>
         </LinearLayout>
