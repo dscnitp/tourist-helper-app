@@ -48,7 +48,7 @@
             android:layout_marginLeft="158dp"
             android:scaleType="centerCrop"
             android:alpha="0.8"
-            android:src="@drawable/profile"
+            android:src="@drawable/profile_img1"
 
 
 
@@ -62,7 +62,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="158dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_edit_dp"
+            android:src="@drawable/ic_edit_profile"
             />
 
 
