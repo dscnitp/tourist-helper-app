@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="230dp"
-            android:src="@drawable/bgn_location"
+            android:src="@drawable/bg_location_sample1"
             android:scaleType="centerCrop"/>
         <ImageView
             android:layout_width="match_parent"

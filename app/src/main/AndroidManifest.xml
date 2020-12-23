@@ -3,6 +3,7 @@
     package="com.dscnitp.touristshelperapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
@@ -10,6 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,6 +23,9 @@
             android:value="AIzaSyDMMr0NDVKzvJyEtC7Eq2xsXIx9nCu5p_Y"/>
         <activity android:name=".activity.SplashScreen" >
 
+
+        </activity>
+        <activity android:name=".activity.EditProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
