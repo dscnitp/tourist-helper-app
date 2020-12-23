@@ -32,6 +32,7 @@ public class EditProfile extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_profile);
+
         bindViewId();
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +95,7 @@ public class EditProfile extends AppCompatActivity {
             }
         });
         requestQueue.add(jsonObjectRequest);
+
 
     }
 }
