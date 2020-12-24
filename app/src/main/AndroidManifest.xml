@@ -36,7 +36,9 @@
         <activity android:name=".bottom_bar" />
         <activity android:name=".MainActivity" />
         <activity android:name=".homeActivity" />
-        <activity android:name=".LoginScreen"></activity>
+        <activity android:name=".LoginScreen">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

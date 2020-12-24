@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -52,8 +53,8 @@ public class LoginWithOtp extends AppCompatActivity {
                 String code = phoneAuthCredential.getSmsCode();
                 if (code != null) {
 
-                    otp_edit.setText(code);
-                    otp_edit.setVisibility(View.VISIBLE);
+                    otpEdit.setText(code);
+                    otpEdit.setVisibility(View.VISIBLE);
                     verify.setVisibility(View.VISIBLE);
 
                     verifyVerificationCode(code);
