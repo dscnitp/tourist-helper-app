@@ -143,6 +143,7 @@
         </item>
     </style>
 
+<<<<<<< HEAD
     <style name="map">
         <item name="android:textSize">
             20sp
@@ -173,5 +174,51 @@
         </item>
     </style>
 
+||||||| b10d115
+=======
+    <style name="map">
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+    </style>
+
+    <style name="recent_loca">
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+    </style>
+
+    <style name="mumbai_maha">
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+    </style>
+
+    <style name="login">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #121112
+        </item>
+
+    </style>
+
+
+>>>>>>> f73a88b81cd3fca1b5932036bd98f807a1ff631b
 
 </resources>

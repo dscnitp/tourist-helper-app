@@ -8,16 +8,20 @@ import android.os.Bundle;
 import com.dscnitp.touristshelperapp.R;
 import com.ncorti.slidetoact.SlideToActView;
 
-public class SplashScreen extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.OnItemSelected;
 
+public class SplashScreen extends AppCompatActivity {
+@BindView(R.id.slider)
     SlideToActView slideToActView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        slideToActView = findViewById(R.id.slider);
-
+        ButterKnife.bind(this);
         slideToActView.setOnSlideCompleteListener(new SlideToActView.OnSlideCompleteListener() {
             @Override
             public void onSlideComplete(SlideToActView slideToActView) {
@@ -26,4 +30,5 @@ public class SplashScreen extends AppCompatActivity {
             }
         });
     }
-}
+
+  }

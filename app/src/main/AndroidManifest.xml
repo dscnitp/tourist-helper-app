@@ -3,32 +3,58 @@
     package="com.dscnitp.touristshelperapp" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+||||||| b10d115
+=======
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+>>>>>>> f73a88b81cd3fca1b5932036bd98f807a1ff631b
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/AppTheme" >
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDMMr0NDVKzvJyEtC7Eq2xsXIx9nCu5p_Y"/>
+||||||| b10d115
+        android:theme="@style/AppTheme" >
+=======
+        android:theme="@style/AppTheme">
+        <activity android:name=".SettingsActivity"></activity>
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDMMr0NDVKzvJyEtC7Eq2xsXIx9nCu5p_Y"/>
+>>>>>>> f73a88b81cd3fca1b5932036bd98f807a1ff631b
         <activity android:name=".activity.SplashScreen" >
+
+
+        </activity>
+        <activity android:name=".activity.EditProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HomeActivity">
-        </activity>
-        <activity android:name=".activity.EditProfile"/>
-        <activity android:name=".activity.LoginScreen" >
+        <activity android:name=".Google_Sign_in" />
+        <activity android:name=".bottom_bar" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".homeActivity" />
+        <activity android:name=".LoginScreen">
+
         </activity>
 
         <meta-data
