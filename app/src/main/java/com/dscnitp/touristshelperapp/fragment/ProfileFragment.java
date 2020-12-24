@@ -38,6 +38,8 @@ public class ProfileFragment extends Fragment{
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     ImageView editProfile;
+    private static Context ctx;
+
 
 
     @Override
@@ -47,7 +49,8 @@ public class ProfileFragment extends Fragment{
         View view=inflater.inflate(R.layout.activity_profile, container, false);
         recyclerView =(RecyclerView) view.findViewById(R.id.recyclerView);
         editProfile = view.findViewById(R.id.edit_profile);
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+
+        RequestQueue requestQueue = Volley.newRequestQueue(ctx.getApplicationContext());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 "http://dscnitp.pythonanywhere.com/api/user_profile/user_email", null, new Response.Listener<JSONObject>() {
             @Override
