@@ -33,7 +33,9 @@
     </string>
     <string name="mumbai_maha">Mumbai,Maharastra</string>
     <string name="login">Login</string>
-
+    <string name="top_places">Top Places</string>
+    <string name="uttarakhand">Uttarakhand</string>
+    <string name="all_cities">All Cities</string>
 
 
 </resources>
