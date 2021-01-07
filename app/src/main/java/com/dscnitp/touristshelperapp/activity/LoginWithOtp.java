@@ -1,5 +1,6 @@
 package com.dscnitp.touristshelperapp.activity;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -96,6 +97,7 @@ public void verifyClick(){
     }
     verifyVerificationCode(code);
 }
+
     private void sendVerificationCode(String mobile) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 "+91" + mobile,
