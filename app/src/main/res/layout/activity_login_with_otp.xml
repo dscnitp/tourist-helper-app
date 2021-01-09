@@ -7,10 +7,9 @@
     android:orientation="vertical"
     tools:context=".activity.LoginWithOtp">
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
     <ImageButton
         android:layout_marginTop="20dp"
@@ -39,12 +38,11 @@
     </RelativeLayout>
 
     <ImageView
-        android:layout_width="231dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="90dp"
-        android:background="@drawable/otp_page_back_img"
-
+        android:src="@drawable/otp_page_back_img"
         />
 
 
