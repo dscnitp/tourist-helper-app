@@ -50,7 +50,7 @@ public class ProfileFragment extends Fragment{
         recyclerView =(RecyclerView) view.findViewById(R.id.recyclerView);
         editProfile = view.findViewById(R.id.edit_profile);
 
-        RequestQueue requestQueue = Volley.newRequestQueue(ctx.getApplicationContext());
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 "http://dscnitp.pythonanywhere.com/api/user_profile/user_email", null, new Response.Listener<JSONObject>() {
             @Override
