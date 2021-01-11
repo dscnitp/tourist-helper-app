@@ -25,6 +25,20 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDMMr0NDVKzvJyEtC7Eq2xsXIx9nCu5p_Y"/>
         <activity android:name=".activity.SplashScreen" >
+
+
+
+        </activity>
+        <activity android:name=".activity.EditProfile">
+
+        </activity>
+        <activity android:name=".activity.LoginScreen" >
+
+        </activity>
+        <!--<activity android:name=".bottom_bar" />
+        <activity android:name=".MainActivity" />-->
+        <activity android:name=".activity.HomeActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,17 +46,14 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".activity.EditProfile"/>
+
         <activity android:name=".activity.LoginWithOtp"/>
         <activity android:name=".activity.LoginScreen"/>
         <activity android:name=".Google_Sign_in" />
         <activity android:name=".bottom_bar" />
         <activity android:name=".MainActivity" />
 
-        <activity android:name=".activity.HomeActivity" />
-        <activity android:name=".activity.LoginScreen">
-
-        </activity>
+        
 
 
         <meta-data

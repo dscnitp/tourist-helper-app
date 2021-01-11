@@ -4,11 +4,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.ExploreFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:textColor="#000"
+                android:gravity="center"
+                android:fontFamily="@font/raleway_bold"
+                android:paddingLeft="30dp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="23sp"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="fill_parent"
+                android:src="@drawable/ic_search1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/top_places"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:fontFamily="@font/raleway"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_places"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/all_cities"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:fontFamily="@font/raleway"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_all_cities"
+            android:layout_width="match_parent"
+            android:layout_height="347dp" />
+    </LinearLayout>
+
 
 </FrameLayout>
