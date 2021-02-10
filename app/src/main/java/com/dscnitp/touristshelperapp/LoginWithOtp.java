@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.dscnitp.touristshelperapp.Model.UserProfile;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -18,14 +19,20 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
 public class LoginWithOtp extends AppCompatActivity {
 
     private Button request, verify;
     private EditText mobile_edit, otp_edit;
-    private String phone, mVerificationId;
+    private String phone, mVerificationId,Id;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private FirebaseAuth mAuth;
 
@@ -113,10 +120,58 @@ public class LoginWithOtp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "You logged in Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginWithOtp.this, homeActivity.class);
-                            startActivity(intent);
+                            FirebaseDatabase firebaseDatabase1=FirebaseDatabase.getInstance();
+                            DatabaseReference databaseReference1=firebaseDatabase1.getReference("UserProfile");
+                            databaseReference1.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    if(snapshot.exists())
+                                    {
+                                        HashMap<String,Object> hashMap= (HashMap<String, Object>) snapshot.getValue();
+                                        for(String key:hashMap.keySet())
+                                        {
+                                            Object data=hashMap.get(key);
+                                            HashMap<String,Object> hashMap1= (HashMap<String, Object>) data;
+                                            String contact=hashMap1.get("contact").toString();
+                                            if(contact.equals(phone))
+                                            {
+                                                FirebaseAuth auth= FirebaseAuth.getInstance();
+                                                if(auth.getCurrentUser()!=null) {
+                                                    Id = auth.getCurrentUser().getUid();
+                                                    Intent intent = new Intent(LoginWithOtp.this, homeActivity.class);
+                                                    intent.putExtra("Id",Id);
+                                                    startActivity(intent);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
 
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+
+                                }
+                            });
+                            UserProfile userProfile=new UserProfile(
+                                    "",
+                                    "",
+                                    "",
+                                    phone,
+                                    "",
+                                    "","","",""
+                            );
+                            Id=mAuth.getCurrentUser().getUid();
+                            FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
+                            DatabaseReference databaseReference=firebaseDatabase.getReference("UserProfile").child(Id);
+                            databaseReference.setValue(userProfile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getApplicationContext(), "You logged in Successfully", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(LoginWithOtp.this, homeActivity.class);
+                                    intent.putExtra("Id",Id);
+                                    startActivity(intent);
+                                }
+                            });
                         } else {
 
                             String message = "Somthing is wrong, we will fix it soon...";

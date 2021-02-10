@@ -26,7 +26,7 @@
         <activity android:name=".homeActivity" />
         <activity android:name=".LoginScreen" >
         </activity>
-
+        <activity android:name=".LoginWithOtp" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
